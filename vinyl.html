@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Work+Sans:400,700" rel="stylesheet">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+    crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vinyl Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form action="" id="SearchArtist" class="search-artist">
+        <input type="search" value="" class="form-control">
+        <input type="submit" value="Search Artist" id="Submit" class="search-artist-submit">
+    </form>
+    <div class="wrapper" id="Wrapper">
+        <header class="header" id="header">
+            <div id="Avatar" class="avatar">
+                <div class="artist-prompt">
+                    <h1 class="featured-artist" id="featuredArtist"></h1><div class="artist-hype"><span id="hideShowHype"></span> </div>
+                    <div id="Social"><a href="" class="featured-artist-fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" class="featured-artist-twtr"><i class="fab fa-twitter"></i></a>
+                    <a href="" class="featured-artist-insta"><i class="fab fa-instagram"></i></a></div>
+                </div>
+            </div>
+        </header>
+        <div id="Hype" class="hype"></div>
+        <nav id="Wrap" class="divider-top divider-bottom">
+            <ul class="nav-list">
+                <li class="nav-li">
+                    <a href="#News" class="nav-link">NEWS</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#Popular" class="nav-link">POPULAR</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#Calendar" class="nav-link">CALENDAR</a>
+                </li>
+                <li class="nav-li">
+                    <a href="#Album" class="nav-link">ALBUM</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="News" class="news"></div>
+        <div class="popular">
+            <span class="header">Popular</span>
+            <div class="columns scrolling-wrapper-flexbox">
+                <div id="ColumnOne" class="column-one"></div>
+                <div id="ColumnTwo" class="column-two"></div>
+            </div>
+        </div>
+        <div class="calendar-masthead">
+            <div id="Date" class="date">
+                <div>
+                    <span id="Month" class="month"></span>
+                    <span id="Year" class="year"></span>
+                    <span id="caretDown"><i class="fas fa-sort-down"></i></span>
+                    <span id="caretRight"><i class="fas fa-caret-right"></i></span>
+                </div>
+                <span class="filter"><i class="fas fa-filter"></i></span>
+            </div>
+        </div>
+        <div id="CalendarDrop" class="calendar-drop scrolling-wrapper-flexbox">
+            <div id="CalRow" class="cal-row  divider-top divider-bottom">
+                <div class="bullet-boarder">
+                    <span id="CalRowDay" class="cal-row-day"></span>
+                    <span id="CalRowMonth" class="cal-row-month"></span>
+                </div>
+                <div class="bullet"></div>
+                <div id="" class="events">
+                    <div class="inline-grid event-details-background-image">
+                        <div class="Aligner padding">
+                            <div class="Aligner-item--top track-name">Festival 2018</div>
+                            <div class="Aligner-item--bottom">
+                                <span class="event-dtls">California Desert</span>
+                                <span class="event-dtls"> &#149; </span>
+                                <span class="event-dtls"> Ca</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="" class="events">
+                    <div class="inline-grid event-details-background-image">
+                        <div class="Aligner padding">
+                            <div class="Aligner-item--top track-name">Festival 2018</div>
+                            <div class="Aligner-item--bottom">
+                                <span class="event-dtls">California Desert</span>
+                                <span class="event-dtls"> &#149; </span>
+                                <span class="event-dtls"> Ca</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Album" class="divider-top divider-bottom padding albums">
+            <div>
+                <span class="header">Albums </span>
+                <span><i id="search-icon" class="fas fa-search"></i></span>
+                <form class="search" role="search">
+                    <div id="search-form">
+                        <input type="text" class="form-control" placeholder="">
+                    </div>
+                </form>
+            </div>
+            <span class="filter">
+                <i class="fas fa-filter"></i>
+            </span>
+            <!-- <div class="white">
+                <a class="btn btn-white" href="https://geo.itunes.apple.com/us/album/nothing-was-the-same/id705503499?mt=1&amp;app=music" target="_blank">
+                    <i class="fas fa-apple"></i></a>
+                <a class="btn btn-white" href="https://open.spotify.com/album/2gXTTQ713nCELgPOS0qWyt" target="_blank">
+                    <i class="fas fa-spotify"></i></a>
+            </div> -->
+        </div>
+        <div id="AlbumDisplay" class="album-display scrolling-wrapper-flexbox">
+            <div id="CoverContainer" class="cover-container"></div>
+        </div>
+        <div class="related"></div>
+    </div>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
